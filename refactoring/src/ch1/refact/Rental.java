@@ -1,7 +1,7 @@
 package ch1.refact;
 
 public class Rental {
-	Movie _movie;
+	private Movie _movie;
 	private int _daysRented;
 	
 	public Rental(Movie _movie, int _daysRented) {

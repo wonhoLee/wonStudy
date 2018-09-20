@@ -6,7 +6,7 @@ public class Movie {
 	public static final int NEW_RELEASE = 1;
 	
 	private String _title;
-	Price _price;
+	private Price _price;
 	
 	public Movie(String _title, int _priceCode) {
 		super();
