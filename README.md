@@ -9,3 +9,12 @@
 
 3. effectivejava 3rd Study 용
  - https://www.youtube.com/watch?v=A-t1T3_m15M&index=4&list=PLfI752FpVCS8e5ACdi5dpwLdlVkn0QgJJ
+
+4. courseToby 토비유투브 강의 실습용
+ - https://www.youtube.com/watch?v=s-tXAHub6vg
+
+5. refactoring
+ - refactoring 서적 학습용
+
+6. algorithmProblem
+ - 알고리즘문제해결전략 학습용
