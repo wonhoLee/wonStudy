@@ -23,7 +23,7 @@ public class Rental {
 	}
 	
 	double getFrequentRenterPoints() {
-		return _movie._price.getFrequentRenterPoints(_movie, _daysRented);
+		return _movie.getFrequentRenterPoints(_daysRented);
 	}
 	
 }
