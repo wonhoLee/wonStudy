@@ -21,44 +21,51 @@ public class Customer {
 	}
 	
 	public String statement() {
-		double totalAmount = 0;
-		int frequentrenterPoints = 0;
 		Enumeration<Rental> rentals = _rentals.elements();
 		String result = "Rental Record for " + getName() + "\n";
 		while (rentals.hasMoreElements()){
-			double thisAmount = 0;
 			Rental each = (Rental)rentals.nextElement();
 			
-			//각 영화에 대한 요금 결정
-			switch (each.getMovie().getPriceCode()) {
-			case Movie.REGULAR:
-				thisAmount += 2;
-				if(each.getDaysRented() > 2)
-					thisAmount += (each.getDaysRented() - 2) * 1.5;
-				break;
-			case Movie.NEW_RELEASE:
-				thisAmount += each.getDaysRented() * 3;
-				break;
-			case Movie.CHILDREN:
-				thisAmount += 1.5;
-				if (each.getDaysRented() > 3)
-					thisAmount += (each.getDaysRented() - 3) * 1.5;
-				break;
-			}
-			
-			//포인트(frequent recter points) 추가
-			frequentrenterPoints ++;
-			//최신(new realease)을 이틀 이상 대여하는 경우 추가포인트 제공
-			if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1)
-				frequentrenterPoints++;
-			
 			//이 대여에 대한 요금 계산결과 표시
-			result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(thisAmount) + "\n";
-			totalAmount += thisAmount;
+			result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
 		}
 		//풋터(footer) 추가
-		result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
-		result += "You earned " + String.valueOf(frequentrenterPoints) + " frequent renter points";
+		result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
+		result += "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
+		return result;
+	}
+	
+	public String htmlStatement() {
+		Enumeration<Rental> rentals = _rentals.elements();
+		String result = "<H1>Rentals for <EM>" + getName() + "</EM></H1><P>\n";
+		while (rentals.hasMoreElements()){
+			Rental each = (Rental)rentals.nextElement();
+			//이 대여에 대한 요금 계산결과 표시
+			result += each.getMovie().getTitle() + ": " + String.valueOf(each.getCharge()) + "<BR>\n";
+		}
+		//풋터(footer) 추가
+		result += "<P>You owe <EM>" + String.valueOf(getTotalCharge()) + "</EM><P>\n";
+		result += "On this rental you earned <EM>" + String.valueOf(getTotalFrequentRenterPoints()) + "</EM> frequent renter points";
+		return result;
+	}
+	
+	public double getTotalCharge() {
+		double result = 0;
+		Enumeration<Rental> rentals = _rentals.elements();
+		while (rentals.hasMoreElements()){
+			Rental each = (Rental)rentals.nextElement();
+			result += each.getCharge();
+		}
+		return result;
+	}
+	
+	public int getTotalFrequentRenterPoints() {
+		int result = 0;
+		Enumeration<Rental> rentals = _rentals.elements();
+		while (rentals.hasMoreElements()){
+			Rental each = (Rental)rentals.nextElement();
+			result += each.getFrequentRenterPoints();
+		}
 		return result;
 	}
 }
