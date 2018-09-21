@@ -1,4 +1,4 @@
-package me.won.effectivejava3rd.item01;
+package me.won.item01;
 
 import java.util.EnumSet;
 

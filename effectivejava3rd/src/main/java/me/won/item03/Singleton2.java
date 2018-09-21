@@ -1,4 +1,4 @@
-package me.won.effectivejava3rd.item03;
+package me.won.item03;
 
 //static 팩토리 메소드
 public class Singleton2 {

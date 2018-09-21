@@ -1,4 +1,4 @@
-package me.won.effectivejava3rd.item03;
+package me.won.item03;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

@@ -1,4 +1,4 @@
-package me.won.effectivejava3rd.item02;
+package me.won.item02;
 
 import java.util.List;
 
