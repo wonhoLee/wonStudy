@@ -23,3 +23,6 @@
  - spring boot 2.0 학습용
  - https://www.youtube.com/watch?v=PicKx3lDGLk&list=PLfI752FpVCS8tDT1QEYwcXmkKDz-_6nm3
  
+8. courseSB
+ - Node 강의 실습용
+ - https://www.inflearn.com/course/node-js-%EB%85%B8%EB%93%9C%EC%A0%9C%EC%9D%B4%EC%97%90%EC%8A%A4-%EA%B0%95%EC%A2%8C/?subscribe
