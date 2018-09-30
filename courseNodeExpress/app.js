@@ -5,11 +5,17 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
+  , about = require('./routes/about')
   , http = require('http')
   , path = require('path');
 
 var app = express();
+app.locals.money="98873515원";
+//app.locals.jdata=require("./jdata.json");
+
+function about2(request, response){
+	console.log("about Call");
+}
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -28,7 +34,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/about', about.about);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

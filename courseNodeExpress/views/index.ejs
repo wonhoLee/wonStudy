@@ -5,7 +5,25 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+  	<% include nav/header.ejs %>
+  
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <p><%= name %> 는 즐겁습니다.</p>
+    <p><%= money %> 있음.</p>
+    <p><%= jdata.workers %> 있음.</p>
+    
+    <ul>
+    	<% jdata.employees.forEach(function(item){ %>
+    		<li><%= item.firstName %></li>
+    	<% }); %>
+    </ul>
+    
+    
+    <ul>
+    	<% for( var i = 0 ; i < 5 ; i++) { %>
+    	<li>lol</li>
+    	<%}%>
+    </ul>
   </body>
 </html>
