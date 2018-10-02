@@ -1,4 +1,4 @@
-package ch1.origin;
+package ch01.origin;
 
 public class Rental {
 	private Movie _movie;

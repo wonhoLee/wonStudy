@@ -1,4 +1,4 @@
-package ch1.refact;
+package ch01.refact;
 
 public class Rental {
 	private Movie _movie;

@@ -1,4 +1,4 @@
-package ch1.origin;
+package ch01.origin;
 
 public class Movie {
 	public static final int CHILDREN = 2;

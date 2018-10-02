@@ -1,4 +1,4 @@
-package ch1.refact;
+package ch01.refact;
 
 abstract class Price {
 	abstract int getPriceCode();

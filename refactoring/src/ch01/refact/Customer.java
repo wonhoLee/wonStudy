@@ -1,4 +1,4 @@
-package ch1.refact;
+package ch01.refact;
 
 import java.util.Enumeration;
 import java.util.Vector;

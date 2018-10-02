@@ -1,4 +1,4 @@
-package ch1.refact;
+package ch01.refact;
 
 public class Movie {
 	public static final int CHILDREN = 2;
