@@ -1,4 +1,4 @@
-package com.exam.ch04;
+package com.exam.ch04.item01;
 
 //Generic Method 에 대한 설명
 public class Generics2 {

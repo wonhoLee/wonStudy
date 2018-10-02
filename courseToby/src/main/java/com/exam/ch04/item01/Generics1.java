@@ -1,4 +1,4 @@
-package com.exam.ch04;
+package com.exam.ch04.item01;
 
 import java.util.List;
 import java.util.ArrayList;

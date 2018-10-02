@@ -1,4 +1,4 @@
-package com.exam.ch04;
+package com.exam.ch04.item01;
 
 import java.io.Closeable;
 import java.io.Serializable;

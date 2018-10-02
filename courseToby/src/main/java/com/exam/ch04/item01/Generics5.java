@@ -1,7 +1,8 @@
-package com.exam.ch04;
+package com.exam.ch04.item01;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 //Type inference : 타입추론
@@ -10,7 +11,14 @@ public class Generics5 {
 	
 	//차이점
 	static <T> void method2(List<T> t) {}	// T : 향후 알게되면 그 type으로 쓰겠다
-	static void method3(List<?> t) {}		// ? : wildcards -> 뭔지 모르겠다
+	static void method3(List<?> t) {
+		t.add(null); // null 만 입력가능함
+		t.size();
+		t.clear();
+		Iterator<?> it = t.iterator();
+		t.equals("");
+		//이정도 사용할수있는 범위 전부
+	}		// ? : wildcards -> 뭔지 모르겠다 , 사용에 제약도 있음
 	
 	//차이점
 	static void printList(List<Object> list) {	//
