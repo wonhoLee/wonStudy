@@ -59,6 +59,5 @@ public class Generics1 {
 				(Comparator<Object>)(a,b) -> a.toString().compareTo(b.toString())));
 		System.out.println(Collections.<Number>max(list, 
 				(Comparator<Object>)(a,b) -> a.toString().compareTo(b.toString())));
-		
 	}
 }
