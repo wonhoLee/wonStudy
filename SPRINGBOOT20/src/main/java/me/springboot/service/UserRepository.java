@@ -1,4 +1,4 @@
-package me.springboot.user;
+package me.springboot.service;
 
 import org.springframework.stereotype.Repository;
 

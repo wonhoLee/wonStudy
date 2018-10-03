@@ -1,5 +1,6 @@
 package me.springboot;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,8 +10,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@Import(ServiceConfig.class)
 //@ImportResource("application.xml")
 public class Application {
+
     public static void main(String[] args){
-        SpringApplication.run(Application.class, args);
+        SpringApplication springApplication = new SpringApplication(Application.class);
+        //springApplication.setBanner(new MyBanner());
+
+        springApplication.addListeners(new MyListener());
+
+        springApplication.run(args);
+
+
+        //SpringApplication.run(Application.class, args);
     }
 
 }
