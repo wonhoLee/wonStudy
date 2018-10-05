@@ -1,4 +1,4 @@
-package ch04;
+package me.book.ch04;
 
 import java.io.File;
 import java.io.FileNotFoundException;

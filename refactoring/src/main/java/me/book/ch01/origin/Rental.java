@@ -1,4 +1,4 @@
-package ch01.refact;
+package me.book.ch01.origin;
 
 public class Rental {
 	private Movie _movie;
@@ -18,12 +18,5 @@ public class Rental {
 		return _daysRented;
 	}
 	
-	double getCharge() {
-		return _movie.getCharge(_daysRented);
-	}
-	
-	double getFrequentRenterPoints() {
-		return _movie.getFrequentRenterPoints(_daysRented);
-	}
 	
 }

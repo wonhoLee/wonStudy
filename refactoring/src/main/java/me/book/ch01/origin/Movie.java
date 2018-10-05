@@ -1,4 +1,4 @@
-package ch01.origin;
+package me.book.ch01.origin;
 
 public class Movie {
 	public static final int CHILDREN = 2;

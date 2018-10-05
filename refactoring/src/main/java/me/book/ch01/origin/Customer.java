@@ -1,4 +1,4 @@
-package ch01.origin;
+package me.book.ch01.origin;
 
 import java.util.Enumeration;
 import java.util.Vector;
