@@ -1,4 +1,4 @@
-package ch05;
+package me.exam.ch05;
 
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;

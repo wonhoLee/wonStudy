@@ -1,4 +1,4 @@
-package ch04;
+package me.exam.ch04;
 
 import java.util.ArrayList;
 import java.util.Arrays;

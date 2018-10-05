@@ -1,4 +1,4 @@
-package ch03;
+package me.exam.ch03;
 
 import java.util.function.Consumer;
 

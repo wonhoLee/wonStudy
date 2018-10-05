@@ -1,4 +1,4 @@
-package ch02;
+package me.exam.ch02;
 
 import java.util.function.Function;
 

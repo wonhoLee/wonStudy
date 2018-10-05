@@ -1,4 +1,4 @@
-package ch01;
+package me.exam.ch01;
 
 public class OopAnotherExample2 {
 	

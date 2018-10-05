@@ -1,4 +1,4 @@
-package ch06;
+package me.exam.ch06;
 
 public class MyFunctionInterfaceExample {
 	public static void main(String[] args) {
