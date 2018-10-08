@@ -91,14 +91,6 @@ public class StreamExamples4 {
 
 @AllArgsConstructor
 @Data
-class Product {
-	private Long id;
-	private String name;
-	private BigDecimal price;
-}
-
-@AllArgsConstructor
-@Data
 class OrderedItem{
 	private Long id;
 	private Product product;
