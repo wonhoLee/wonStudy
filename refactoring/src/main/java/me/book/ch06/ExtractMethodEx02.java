@@ -24,6 +24,7 @@ public class ExtractMethodEx02 {
 		System.out.println("amount : " + outstanding);
 	}*/
 	private String _name;
+	private Order _orders;
 	
 	void printOwing() {
 		printBanner();

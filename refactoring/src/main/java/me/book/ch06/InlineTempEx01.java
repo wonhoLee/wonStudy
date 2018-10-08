@@ -13,17 +13,3 @@ public class InlineTempEx01 {
 		return (anOrder.getBasePrice() > 1000);
 	}
 }
-
-class Order{
-	private double basePrice;
-
-	public Order(double basePrice) {
-		super();
-		this.basePrice = basePrice;
-	}
-
-	public double getBasePrice() {
-		return basePrice;
-	}
-	
-}
