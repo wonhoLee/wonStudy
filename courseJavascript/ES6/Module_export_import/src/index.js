@@ -1,4 +1,5 @@
-import log, {getTime, getCurretHour, MyLogger, _} from './myLogger';
+import log, {getTime, getCurretHour, MyLogger} from './myLogger';
+import _  from './utility';
 
 const root = document.querySelector('#root');
 root.innerHTML = '<p>Hello World ! </p>';

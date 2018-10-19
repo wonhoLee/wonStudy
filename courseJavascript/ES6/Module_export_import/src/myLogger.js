@@ -1,10 +1,3 @@
-//utility
-export const _ = {
-    log(data){
-        if(window.console) console.log(data);
-    }
-}
-
 export default function log(data){
     console.log(data);
 }
