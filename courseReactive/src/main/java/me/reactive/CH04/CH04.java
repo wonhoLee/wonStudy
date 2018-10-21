@@ -44,7 +44,8 @@ public class CH04 {
 
 	// TODO Capitalize the users username, firstName and lastName using #asyncCapitalizeUser
 	Flux<User> asyncCapitalizeMany(Flux<User> flux) {
-		return flux.flatMap(s -> Flux.just(new User(s.getUsername().toUpperCase(), s.getFirstname().toUpperCase(), s.getLastname().toUpperCase())));
+		//return flux.flatMap(s -> Flux.just(new User(s.getUsername().toUpperCase(), s.getFirstname().toUpperCase(), s.getLastname().toUpperCase())));
+		return flux.flatMap(this::asyncCapitalizeUser);
 	}
 
 	Mono<User> asyncCapitalizeUser(User u) {
