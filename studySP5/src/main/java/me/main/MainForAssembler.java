@@ -12,7 +12,7 @@ import me.spring.MemberRegisterService;
 import me.spring.RegisterRequest;
 import me.spring.WrongIdPasswordException;
 
-public class mainForAssembler {
+public class MainForAssembler {
 	
 	public static void main(String[] args) throws IOException{
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
