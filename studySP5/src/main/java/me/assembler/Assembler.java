@@ -12,7 +12,7 @@ public class Assembler {
 		memberDao = new MemberDao();
 		regSvc = new MemberRegisterService(memberDao);
 		pwdSvc = new ChangePasswordService();
-		pwdSvc.setMemberDao(memberDao);
+//		pwdSvc.setMemberDao(memberDao);
 	}
 	public MemberDao getMemberDao() {
 		return memberDao;
@@ -23,7 +23,4 @@ public class Assembler {
 	public ChangePasswordService getPwdSvc() {
 		return pwdSvc;
 	}
-	
-	
-	
 }

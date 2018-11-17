@@ -1,5 +1,6 @@
 package me.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,9 +23,10 @@ public class AppCtx {
 		return new MemberRegisterService(memberDao());
 	}
 	@Bean
+	@Qualifier("chgPwdSvc")
 	public ChangePasswordService changePwdSvc() {
 		ChangePasswordService pwdSvc = new ChangePasswordService();
-		pwdSvc.setMemberDao(memberDao());
+//		pwdSvc.setMemberDao(memberDao());
 		return pwdSvc;
 	}
 	@Bean
