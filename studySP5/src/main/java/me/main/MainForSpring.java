@@ -7,10 +7,10 @@ import java.io.InputStreamReader;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import me.assembler.Assembler;
 import me.config.AppCtx;
 import me.spring.ChangePasswordService;
 import me.spring.DuplicateMemberException;
+import me.spring.MemberListPrinter;
 import me.spring.MemberNotFoundException;
 import me.spring.MemberRegisterService;
 import me.spring.RegisterRequest;
@@ -36,6 +36,9 @@ public class MainForSpring {
 				continue;
 			}else if(command.startsWith("change ")) {
 				processChangeCommand(command.split(" "));
+				continue;
+			}else if(command.startsWith("list")) {
+				processListCommand();
 				continue;
 			}
 			printHelp();
@@ -93,5 +96,10 @@ public class MainForSpring {
 		System.out.println("명령어 사용법 : ");
 		System.out.println("new  이메일 이름 암호 암호확인");
 		System.out.println("change 이메일 현재비번 변경비번\n");
+	}
+	
+	private static void processListCommand() {
+		MemberListPrinter listPrinter = (MemberListPrinter) ctx.getBean("listPrinter");
+		listPrinter.printAll();
 	}
 }
