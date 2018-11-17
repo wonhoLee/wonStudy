@@ -2,11 +2,15 @@ package me.spring;
 
 import java.util.Collection;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class MemberListPrinter {
+	@Autowired
 	private MemberDao memberDao;
 	private MemberPrinter printer;
-	public MemberListPrinter(MemberDao memberDao, MemberPrinter printer) {
-		this.memberDao = memberDao;
+	
+	public MemberListPrinter(MemberPrinter printer) {
+		//this.memberDao = memberDao;
 		this.printer = printer;
 	}
 	public void printAll() {
