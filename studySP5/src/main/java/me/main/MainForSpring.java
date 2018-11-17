@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import me.config.AppCtx;
+import me.config.AppCtx1;
 import me.spring.ChangePasswordService;
 import me.spring.DuplicateMemberException;
 import me.spring.MemberInfoPrinter;
@@ -15,6 +15,7 @@ import me.spring.MemberListPrinter;
 import me.spring.MemberNotFoundException;
 import me.spring.MemberRegisterService;
 import me.spring.RegisterRequest;
+import me.spring.VersionPrinter;
 import me.spring.WrongIdPasswordException;
 
 public class MainForSpring {
@@ -22,7 +23,7 @@ public class MainForSpring {
 	private static ApplicationContext ctx = null;
 	
 	public static void main(String[] args) throws IOException{
-		ctx = new AnnotationConfigApplicationContext(AppCtx.class);
+		ctx = new AnnotationConfigApplicationContext(AppCtx1.class);
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		while(true) {
@@ -43,6 +44,9 @@ public class MainForSpring {
 				continue;
 			}else if(command.startsWith("info")) {
 				processInfoCommand(command.split(" "));
+				continue;
+			}else if(command.startsWith("version")) {
+				processVersionCommand();
 				continue;
 			}
 			printHelp();
@@ -102,6 +106,7 @@ public class MainForSpring {
 		System.out.println("change 이메일 현재비번 변경비번\n");
 		System.out.println("list\n");
 		System.out.println("info 이메일\n");
+		System.out.println("version\n");
 	}
 	
 	private static void processListCommand() {
@@ -116,5 +121,10 @@ public class MainForSpring {
 		}
 		MemberInfoPrinter infoPrinter = (MemberInfoPrinter) ctx.getBean("infoPrinter");
 		infoPrinter.printMemberInfo(args[1]);
+	}
+	
+	private static void processVersionCommand() {
+		VersionPrinter versionPrinter = ctx.getBean("versionPrinter", VersionPrinter.class);
+		versionPrinter.pirnt();
 	}
 }
