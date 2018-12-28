@@ -16,6 +16,7 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
   }
 }
