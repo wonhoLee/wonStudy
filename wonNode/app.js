@@ -1,9 +1,17 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+	host : '192.168.0.11',
+	user : 'myuser',
+	password : 'test1234',
+	database : 'mydatabase'
+});
 
-var cors = require('cors');
+connection.connect();
 
-var app = express();
+const app = express();
 app.listen(3000, () => {
 	console.log("start!! express server on port 3000");
 });
@@ -32,6 +40,6 @@ app.post('/email_post', (req,res) => {
 app.post('/ajax_send_email', (req,res) => {
 	console.log(req.body.email);
 	//check validation about input value => select db
-	var responseData = {'result' : 'ok', 'email' : req.body.email};
+	let responseData = {'result' : 'ok', 'email' : req.body.email};
 	res.json(responseData);
 });
