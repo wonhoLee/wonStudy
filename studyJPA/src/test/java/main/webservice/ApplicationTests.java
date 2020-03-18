@@ -1,10 +1,10 @@
-package main;
+package main.webservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StudyJpaApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {

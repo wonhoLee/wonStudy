@@ -1,13 +1,13 @@
-package main;
+package main.webservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudyJpaApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudyJpaApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
