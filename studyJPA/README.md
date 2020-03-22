@@ -3,6 +3,8 @@
 - CH1 : https://jojoldu.tistory.com/250?category=635883
 - CH4 : https://jojoldu.tistory.com/259?category=635883
 - CH5 : https://jojoldu.tistory.com/263?category=635883
+- CH6 : https://jojoldu.tistory.com/265?category=635883
+TDD : https://www.youtube.com/watch?v=wmHV6L0e1sU&index=7&t=1538s&list=PLagTY0ogyVkIl2kTr08w-4MLGYWJz7lNK
 
 ## CH4
 - AWS EC2 설정
@@ -23,9 +25,27 @@ sudo tar zxvf openjdk-11.0.2_linux-x64_bin.tar.gz
 - GIT 설치
 sudo yum install git
 git --version
-mkdir app
-mkdir app/git
-git clone https://github.com/프로젝트주소.git
+mkdir /applications
+mkdir /applications/dev
+git clone https://github.com/wonhoLee/serverTest.git
+
+vi gradle.properties
+org.gradle.java.home=/applications/jdk-11.0.2
+
+cd /etc/profile.d
+vi ./java_sh
+export JAVA_HOME=/applications/jdk-11.0.2
+export PATH=$PATH:$JAVA_HOME/bin
+
+firewall-cmd --add-port=8080/tcp
+
 ./gradlew test
 - 배포 스크립트
 - 서비스 시작 및 외부에서 서비스 접속
+
+## CH6
+- Travis CI
+- AWS CodeDeploy
+
+## CH7
+- Nginx
