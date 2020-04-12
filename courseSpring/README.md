@@ -35,3 +35,19 @@
 - https://www.youtube.com/watch?v=GeLBZ-Fe38s&list=PLfI752FpVCS8_5t29DWnsrL9NudvKDAKY&index=9
 - Spring 3가지 주요개념
   - IOC // AOP // PSA
+- Aspect oriented programming
+- 구현방법
+  - 컴파일 A.java ---- (AOP) --- A.class (AspectJ)
+  - 바이트코드 조작 A.java -> A.class ---(AOP)--> 메모리 (AspectJ)
+  - 프록시패턴(스프링 AOP)
+
+## CH10 - 프록시패턴
+## CH11 - AOP 실습
+- https://www.youtube.com/watch?v=3750wh1wNuY&list=PLfI752FpVCS8_5t29DWnsrL9NudvKDAKY&index=11
+
+## CH12 - PSA & 트랜잭션
+- Portable Service Abstraction
+- @GetMapping  // @PostMapping // @RequestMapping
+- WebFlux - Tomcat -> Netty
+- 트랜잭션 - @Transactional
+- 스프링 캐시 - @Cacheable
