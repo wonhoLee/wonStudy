@@ -15,9 +15,11 @@ import lombok.Setter;
 public class Member {
 	@Id
 	@Column(name = "ID")
-	private String memberId;
-	
-	private String name;
-	private String tel;
+	private String id;
+
+	@Column(name = "NAME")
+	private String username;
+
+	private int age;
 
 }
