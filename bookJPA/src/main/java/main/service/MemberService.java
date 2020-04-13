@@ -29,7 +29,7 @@ public class MemberService {
 		// 수정
 		member.setAge(20);
 		memberRepository.save(member);
-
+		
 		// 한건 조회
 		Member findMember = memberRepository.findById(id);
 		System.out.println("findMember : " + findMember.getUsername() + " Age : " + findMember.getAge());
@@ -38,6 +38,8 @@ public class MemberService {
 		List<Member> members = memberRepository.findAll();
 		System.out.println("members.size : " + members.size());
 
+		
+//		memberRepository.delete(member);
 //		memberRepository.deleteAll();
 	}
 }
