@@ -1,14 +1,9 @@
 package main.ch5;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.*;
 
 @Entity
-public class Member {
+public class MemberCh5 {
     @Id
     @Column(name = "MEMBER_ID")
     private String id;
@@ -18,7 +13,10 @@ public class Member {
     @JoinColumn(name="TEAM_ID")
     private Team team;
 
-    public Member(String id, String username) {
+    public MemberCh5() {
+    }
+
+    public MemberCh5(String id, String username) {
         this.id = id;
         this.username = username;
     }
@@ -37,5 +35,13 @@ public class Member {
 
     public Team getTeam() {
         return team;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

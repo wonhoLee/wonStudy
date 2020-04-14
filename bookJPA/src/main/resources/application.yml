@@ -3,6 +3,12 @@ spring:
   profiles:
     active: local # 기본 환경 선택
 
+logging:
+  level:
+    org:
+      springframework : INFO
+      springframework.web : DEBUG
+
 #local 환경
 ---
 spring:

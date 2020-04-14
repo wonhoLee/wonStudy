@@ -1,10 +1,9 @@
 package main.controller;
 
+import main.service.MemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import main.service.MemberService;
 
 @Controller
 @RequestMapping("/member")
