@@ -38,7 +38,7 @@ public class MemberService {
 		List<Member> members = memberRepository.findAll();
 		System.out.println("members.size : " + members.size());
 
-		
+
 //		memberRepository.delete(member);
 //		memberRepository.deleteAll();
 	}

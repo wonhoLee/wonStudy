@@ -1,8 +1,5 @@
 package main.member;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -32,6 +29,11 @@ public class Member {
 
 	@Lob
 	private String description;
+
+	@Embedded
+	Period workPeriod;
+	@Embedded
+	Address homeAddress;
 
 	public String getId() {
 		return id;
