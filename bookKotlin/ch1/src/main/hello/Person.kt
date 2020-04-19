@@ -7,3 +7,13 @@ fun main(args: Array<String>) {
     val oldest = persons.maxBy { it.age ?: 0 }
     println("나이가 가장 많은 사람: $oldest")
 }
+
+//fun renderPersonList(persons: Collection<Person>) =
+//        createHTML().table {
+//            for (person in persons) {
+//                tr {
+//                    td { +person.name }
+//                    td { +person.age }
+//                }
+//            }
+//        }
