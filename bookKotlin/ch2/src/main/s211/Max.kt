@@ -1,4 +1,4 @@
-package main.`211`
+package main.s211
 
 fun max(a: Int, b: Int): Int {
     return if (a > b) a else b
