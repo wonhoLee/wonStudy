@@ -6,6 +6,10 @@ import main.ch5.Team;
 import main.ch5.TeamRepository;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.TypedQuery;
+import java.awt.print.PageFormat;
+import java.awt.print.Pageable;
+import java.awt.print.Printable;
 import java.util.List;
 
 @Service
@@ -62,5 +66,4 @@ public class Ch5Service {
         Team team2 = new Team("team2", "팀2");
         teamRepository.save(team2);
     }
-
 }
