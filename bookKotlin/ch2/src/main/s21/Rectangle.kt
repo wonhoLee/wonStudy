@@ -1,4 +1,4 @@
-package main.s211
+package main.s21
 
 import kotlin.random.Random
 

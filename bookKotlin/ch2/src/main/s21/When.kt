@@ -1,6 +1,6 @@
-package main.s211
+package main.s21
 
-import main.s211.Color.*
+import main.s21.Color.*
 import java.lang.Exception
 
 class When {

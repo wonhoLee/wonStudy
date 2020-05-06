@@ -1,4 +1,4 @@
-package main.s211
+package main.s21
 
 enum class Color (
         val r: Int, val g: Int, val b: Int
