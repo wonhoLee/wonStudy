@@ -17,9 +17,9 @@ fun eval(e: Expr): Int {
 
 fun eval2(e: Expr): Int {
     if (e is Num) {
-        e.value
+        return e.value
     } else if (e is Sum) {
-        eval(e.right) + eval(e.left);
+        return eval2(e.right) + eval2(e.left);
     } else {
         throw IllegalArgumentException("Unknown Expressions")
     }
@@ -28,10 +28,26 @@ fun eval2(e: Expr): Int {
 fun eval3(e: Expr): Int {
     when (e) {
         is Num ->
-            e.value
+            return e.value
         is Sum ->
-            eval(e.right) + eval(e.left);
+            return eval3(e.right) + eval3(e.left);
         else ->
             throw IllegalArgumentException("Unknown Expressions")
+    }
+}
+
+fun evalWithLogging(e: Expr): Int {
+    when (e) {
+        is Num -> {
+            println("num: ${e.value}")
+            return e.value
+        }
+        is Sum -> {
+            val left = evalWithLogging(e.left)
+            val right = evalWithLogging(e.right)
+            println("sum: $left + $right")
+            return left + right
+        }
+        else -> throw IllegalArgumentException("Unknown Expressions")
     }
 }
