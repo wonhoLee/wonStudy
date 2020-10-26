@@ -26,3 +26,9 @@
 8. courseNode, courseNodeExpress
  - Node 강의 실습용
  - https://www.inflearn.com/course/node-js-%EB%85%B8%EB%93%9C%EC%A0%9C%EC%9D%B4%EC%97%90%EC%8A%A4-%EA%B0%95%EC%A2%8C/?subscribe
+
+# 학습
+- Java 9 ~ 13 변경사항
+  - https://daddyprogrammer.org/post/10411/jdk-roadmap-change-jdk9-11/
+- Null Pointer에 대한 이야기
+  - https://www.youtube.com/watch?v=DedY9dKv3tk
